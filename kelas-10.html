@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas 10</title>
+    <script src="https://kit.fontawesome.com/d419625655.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #20202b;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            height: 15vh;
+        }
+
+        .logo {
+            font-weight: bolder;
+            color: white;
+        }
+
+        .navbar ul {
+            list-style: none;
+        }
+
+        .navbar ul li {
+            position: relative;
+            float: left;
+            background-color: rgb(69, 69, 69);
+            margin: 10px;
+            width: 90px;
+            text-align: center;
+            color: white;
+        }
+
+        .navbar ul li a {
+            color: inherit;
+            padding: 10px;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .navbar ul li a:hover {
+            color: white;
+            background-color: #ff9100;  
+            cursor: pointer;
+            transform: scale(1.1);
+            border-radius: 5px;
+        }
+
+        .navbar ul li ul {
+            position: absolute;
+            left: -10px;
+            background-color: #20202b;
+            display: none;
+        }
+
+        .navbar ul li:focus-within > ul,
+        .navbar ul li:hover > ul {
+            display: initial;
+        }
+
+        #menu {
+            display: none;
+        }
+
+        header label {
+            font-size: 25px;
+            color: white;
+            background-color: rgb(69, 69, 69);
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        main {
+            min-height: 100vh;
+            margin-top: 120px;
+            background: url(/img/background.jpeg);
+        }
+
+        main h2 {
+            text-align: center;
+        }
+
+        .isi {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+            grid-template-rows: repeat(2, auto);   /* 2 baris */
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .isi a {
+            color: white;
+        }
+
+        .isi h4 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .isi-1 {
+            text-align: center;
+            padding: 10px;
+            background-color: #20202b;
+            border-radius: 10px;
+            outline: 2px solid #ff9100;
+            cursor: pointer;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 20px;
+            }
+
+            header label {
+                display: initial;
+            }
+
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #20202b;
+                display: none;
+            }
+
+            .navbar ul li {
+                width: 100%;
+                text-align: left;
+                background-color: inherit;
+            }
+            
+            .navbar ul li ul {
+                position: relative;
+            }
+
+            .navbar ul li a:hover {
+                transform: scale(1);
+            }
+
+            .navbar ul li ul li {
+                background-color: #15151d;
+            }
+
+            #menu:checked ~ .navbar {
+                display: initial;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <h2>Media Pembelajaran IPAS</h2>
+        </a>
+
+        <input type="checkbox" id="menu">
+        <label for="menu"><i class="fa-solid fa-bars"></i></label>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="/projek-web/beranda.html">Beranda</a></li>
+                <li><a href="#">Materi +</a>
+                    <ul>
+                        <li><a href="#">- Kelas 10</a></li>
+                        <li><a href="#">- Kelas 11</a></li>
+                        <li><a href="#">- Kelas 12</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Latihan</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Materi Pembelajaran Kelas 10</h2>
+        <hr style="margin-top: 15px;">
+
+        <div class="isi">
+            <div class="isi-1">
+                <h4>Makhluk Hidup dan Lingkungannya</h4>
+                <a href="#">
+                    <img src="/img/hewan.jpeg" alt="gambar hewan" width="100px">
+                    <p>klik untuk melihat</p>
+                </a>
+            </div>
+
+            <div class="isi-1">
+                <h4>Zat dan Perubahannya</h4>
+                <a href="#">
+                    <img src="/img/hewan.jpeg" alt="gambar hewan" width="100px">
+                    <p>klik untuk melihat</p>
+                </a>
+            </div>
+
+            <div class="isi-1">
+                <h4>Energi dan Perubahannya</h4>
+                <a href="#">
+                    <img src="/img/hewan.jpeg" alt="gambar hewan" width="100px">
+                    <p>klik untuk melihat</p>
+                </a>
+            </div>
+
+            <div class="isi-1">
+                <h4>Bumi dan Antariksa</h4>
+                <a href="#">
+                    <img src="/img/hewan.jpeg" alt="gambar hewan" width="100px">
+                    <p>klik untuk melihat</p>
+                </a>
+            </div>
+
+            <div class="isi-1">
+                <h4>Keruangan dan Konektivitas Antar Ruang dan Waktu</h4>
+                <a href="#">
+                    <img src="/img/hewan.jpeg" alt="gambar hewan" width="100px">
+                    <p>klik untuk melihat</p>
+                </a>
+            </div>
+
+            <div class="isi-1">
+                <a href="#" style="text-decoration: underline;">
+                    <h3>Latihan Soal</h3>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
